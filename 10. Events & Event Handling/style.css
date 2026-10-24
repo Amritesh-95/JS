@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: cursive;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+body {
+  color: white;
+  background-color: rgb(4, 4, 4);
+  padding: 30px;
+  /* position: relative;
+  overflow: hidden; */
+}
+
+/* input {
+  display: block;
+} */
+
+/* h1{
+    color: lightcoral;
+    font-size: 10rem;
+    font-weight: 600;
+    user-select: none;
+} */
+
+/* 
+input{
+    display: none;
+} */
+
+/* #btn {
+  padding: 12px 22px;
+  background-color: lightcoral;
+  color: wheat;
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+#btn:hover {
+  background-color: rgb(240, 128, 128, 0.8);
+} */
+
+/* #main {
+  padding: 30px;
+  height: 100%;
+  width: 100%;
+  background-color: rosybrown;
+}
+
+.card {
+  max-width: 300px;
+  margin-top: 40px;
+  border-radius: 10px;
+  display: inline-block;
+  padding: 20px;
+  border: 1px solid #555;
+}
+
+.profile {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  margin-bottom: 7px;
+  overflow: hidden;
+}
+
+.profile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card h5 {
+  margin-top: 5px;
+}
+.card p {
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+
+#abcd{
+  position: absolute;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background-color: lightsalmon;
+}
+
+#a1{
+  height: 100px;
+  width: 100px;
+  background-color: lightsalmon;
+}
+#a2{
+  height: 100px;
+  width: 100px;
+  background-color: lightseagreen;
+}
+#a3{
+  height: 100px;
+  width: 100px;
+  background-color: lightpink;
+}
+
+
+#abc{
+  height: 400px;
+  width: 400px;
+  background-color: lightsalmon;
+} */
+
+
+/* #main{
+  width: 100%;
+  height: 100%;
+  background-color: rgb(46, 46, 49);
+}
+
+#nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  background-color: rgb(129, 123, 123);
+}
+
+a{
+  color: white;
+}
+
+button{
+  padding: 12px 22px;
+  background-color: rgb(244, 87, 244);
+  border-radius: 5px;
+  border: none;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.lt{
+  text-decoration: line-through;
+} */
+
+
+
+.a{
+  height: 500px;
+  width: 500px;
+  background-color: brown;
+}
+
+.b{
+  height: 400px;
+  width: 400px;
+  background-color: green;
+}
+
+.c{
+  height: 300px;
+  width: 300px;
+  background-color: red;
+}
+

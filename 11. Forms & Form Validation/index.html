@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <style>
+    small {
+      color: red;
+      font-size: 12px;
+    }
+    #hide {
+      display: none;
+    }
+  </style>
+  <body>
+    <!-- <form>
+      <input id="name" type="text" placeholder="name" />
+      <div id="hide">
+        <br>
+        <small>your name should be greater than two characters</small>
+      </div>
+      <br /><br />
+      <input type="email" placeholder="email" />
+      <br /><br />
+      <input type="password" placeholder="password" />
+      <br /><br />
+      <select name="" id="">
+        <option selected disabled>Choose Gender</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Others">Others</option>
+      </select>
+      <br /><br />
+      <textarea name="" id="" placeholder="Tell us about yourself"></textarea>
+      <br /><br />
+      <input type="submit" value="Submit">
+    </form> -->
+
+    //Form Validator
+
+    <main class="card">
+      <h1>Create your account</h1>
+
+      <form id="signup-form" novalidate>
+        <div class="field" id="email-field">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            autocomplete="email"
+            placeholder="you@example.com"
+          />
+          <p class="error" id="emailError" role="alert"></p>
+        </div>
+
+        <div class="field" id="password-field">
+          <label for="password">Password</label>
+          <div class="password-wrap">
+            <input
+              type="password"
+              id="password"
+              name="password"
+              autocomplete="new-password"
+              placeholder="At least 8 characters"
+            />
+            <p class="error" id="passError" role="alert"></p>
+            <button
+              type="button"
+              id="toggle-password"
+              aria-label="Show password"
+            >
+              Show
+            </button>
+          </div>
+
+        <button type="submit" class="submit">Login</button>
+      </form>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

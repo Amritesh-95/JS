@@ -1,0 +1,143 @@
+:root {
+  --bg: #eef1f5;
+  --surface: #ffffff;
+  --text: #1c2430;
+  --muted: #667085;
+  --border: #cfd6df;
+  --accent: #2557d6;
+  --valid: #1a8a4a;
+  --invalid: #c8372d;
+  --weak: #c8372d;
+  --medium: #d98a00;
+  --strong: #1a8a4a;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 1.5rem;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+.card {
+  width: 100%;
+  max-width: 400px;
+  padding: 2rem;
+  background: var(--surface);
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(20, 30, 50, 0.08);
+}
+
+h1 { margin: 0 0 1.5rem; font-size: 1.5rem; }
+
+.field { margin-bottom: 1.25rem; }
+
+label {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+input {
+  width: 100%;
+  padding: 0.65rem 0.8rem;
+  font: inherit;
+  color: inherit;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  background: #fff;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(37, 87, 214, 0.18);
+}
+
+/* --- JS toggles these on .field --- */
+.field.valid input   { border-color: var(--valid); }
+.field.invalid input { border-color: var(--invalid); }
+
+.error {
+  margin: 0.35rem 0 0;
+  min-height: 1.1em;
+  font-size: 0.82rem;
+  color: var(--invalid);
+}
+
+/* Password show/hide */
+.password-wrap { position: relative; }
+.password-wrap input { padding-right: 4.2rem; }
+
+#toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 0.5rem;
+  transform: translateY(-50%);
+  padding: 0.25rem 0.55rem;
+  font: inherit;
+  font-size: 0.8rem;
+  color: var(--accent);
+  background: none;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+#toggle-password:hover { background: rgba(37, 87, 214, 0.08); }
+#toggle-password:focus-visible { outline: 2px solid var(--accent); }
+
+/* Strength meter: JS sets data-strength="weak|medium|strong" on #strength-bar */
+.strength {
+  height: 6px;
+  margin-top: 0.6rem;
+  background: #e4e8ee;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.strength-bar {
+  height: 100%;
+  width: 0;
+  transition: width 0.25s, background-color 0.25s;
+}
+.strength-bar[data-strength="weak"]   { width: 33%;  background: var(--weak); }
+.strength-bar[data-strength="medium"] { width: 66%;  background: var(--medium); }
+.strength-bar[data-strength="strong"] { width: 100%; background: var(--strong); }
+
+.strength-label {
+  margin: 0.3rem 0 0;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+/* Rule checklist: JS adds .met to each <li> */
+
+.submit {
+  width: 100%;
+  padding: 0.75rem;
+  font: inherit;
+  font-weight: 600;
+  color: #fff;
+  background: var(--accent);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+.submit:hover { background: #1c47b3; }
+.submit:disabled { background: #a9b6d4; cursor: not-allowed; }
+.submit:focus-visible { outline: 3px solid rgba(37, 87, 214, 0.4); outline-offset: 2px; }
+
+.success {
+  margin: 0.8rem 0 0;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--valid);
+}
